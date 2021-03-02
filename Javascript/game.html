@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game</title>
+    <style>
+        #box{
+            background:purple;
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    
+    <!-- Button code start from here-->
+    <button onclick="move_left()">Left</button>
+    <button onclick="move_right()">Right</button>
+
+        <!-- Add your buttons for UP Down ..-->
+        <button onclick="up()">up</button>
+        <button onclick="down()">down</button>
+
+    <!-- Button code ends here.....-->
+    <script>
+        var box = document.getElementById("box");
+
+        var pos_box_x = 0;
+        var pos_box_y=0;
+
+        function move_right(){
+            pos_box_x++;
+            box.style.marginLeft = pos_box_x+"px";
+        }
+
+        function move_left(){
+            pos_box_x--;
+            box.style.marginLeft = pos_box_x+"px";
+        }
+
+
+        //your code start from here.......var
+        
+        function down(){
+            pos_box_y++;
+            box.style.marginTop=pos_box_y+"px";
+
+        }
+        function up(){
+            pos_box_y--;
+            box.style.marginTop=pos_box_y+"px";
+        }
+
+
+    </script>
+</body>
+</html>
